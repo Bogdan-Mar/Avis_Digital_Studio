@@ -1,0 +1,608 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+@import "_mixins/breakpoints"
+
+html,
+body
+  overflow-x: hidden   
+body
+  min-width: 320px
+  background: $white_color
+  font-family: Gilroy
+  line-height: 1.5
+  letter-spacing: 0.03em
+  font-weight: 400
+  color: $dark_color
+  -webkit-font-smoothing: antialiased
+
+*
+  box-sizing: border-box
+
+.about
+  padding: 70px 0
+  @include lg
+    padding: 100px 0 90px
+
+.container
+  max-width: 700px
+  margin: 0 auto
+  padding: 0 20px
+  @include md
+    max-width: 1340px
+  @include lg
+    padding: 0 50px
+  @include xl
+    padding: 0 50px
+
+.about__wrap
+  position: relative
+  @include md
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+  @include lg
+    justify-content: flex-end
+
+.about__wrap-bottom
+  @include sm
+    display: flex
+    justify-content: space-between
+    align-items: center
+  @include md
+    align-items: flex-start
+
+  .title__wrap  
+    max-width: 445px
+    
+  .section__title 
+    @include sm
+      margin-bottom: 0
+
+.about__pattern
+  position: absolute
+  left: 0
+  top: -7px
+  width: 100px
+  @include md
+    max-width: 159px
+    width: 13%
+    top: 20px
+
+  svg
+    width: 100%
+    height: auto
+
+.title__wrap  
+  position: relative
+
+.section__title
+  margin-bottom: 30px
+  font-family: Montserrat
+  font-size: 28px
+  text-align: left
+  text-transform: uppercase
+  font-weight: 900
+  color: $dark_color
+  @include md
+    font-size: 32px
+  @include lg
+    margin-bottom: 0
+    font-size: 38px
+
+.about__title
+  @include md
+    width: 32%
+    max-width: 307px
+    margin-right: 80px
+  @include lg
+    width: 30%
+    max-width: 307px
+    margin-right: 110px
+  @include xl
+    width: 25%
+    margin-right: 113px
+
+.about__desc
+  margin-bottom: 85px
+  @include md
+    width: calc( 68% - 80px )
+    margin-top: 12px
+  @include lg
+    max-width: 456px
+    width: 43%
+    margin-right: 49px
+  @include xl
+    width: 37%
+
+.about__text
+  font-size: 16px
+  @include lg
+    font-size: 18px
+  &:last-child
+    margin-top: 20px
+    @include lg
+      margin-top: 25px
+    
+  span
+    font-weight: 700
+
+.about__icon1
+  height: 40px
+  margin: 18px 0
+
+  svg
+    height: 100%
+
+.about 
+  .title__wrap
+    @include sm
+      width: 260px
+    @include md
+      width: 312px
+
+  .subtitle   
+    bottom: -35px
+    right: 0
+    padding: 5px 29px 10px 36px
+    background: $accent_color
+    box-shadow: 0px 5px 25px rgba(253, 235, 0, 0.3)
+    border-radius: 5px   
+    font-family: Montserrat
+    font-size: 25px
+    font-weight: 700
+    @include sm
+      right: -62px
+
+.subtitle  
+  position: absolute 
+  display: inline-block
+  transform: rotate(-5deg)
+  font-size: 25px
+
+.about__icon2
+  display: none
+  @include md
+    display: block
+    width: 40px
+    margin-bottom: 10px
+    margin-top: -30px
+  @include xl
+    margin-top: 0
+    margin-bottom: 27px
+
+  svg
+    width: 100%
+    height: auto
+
+.about__img
+  border-radius: 5px
+  @include sm
+    width: calc( 100% - 260px )
+  @include md
+    max-width: 925px
+    width: calc( 100% - 312px )
+
+  img
+    display: block
+    width: 100%
+    height: auto
+
+.skills
+  padding-top: 70px
+  padding-bottom: 60px
+  background: $accent_color
+  @include md
+    padding-top: 85px
+  @include xl
+    padding-bottom: 11px
+
+  .title__wrap
+    margin-bottom: 83px
+    max-width: 490px
+    @include md   
+      display: flex
+      justify-content: space-between
+      align-items: center
+    @include lg
+      max-width: 527px
+      
+  .subtitle
+    display: flex
+    flex-direction: column
+    right: -2px
+    bottom: -50px    
+    font-size: 16px
+    @include md 
+      width: 350px
+      bottom: -30px
+      right: -200px
+      font-size: 20px
+    @include lg
+      bottom: 46px
+      right: -213px
+      font-size: 25px
+
+    span
+      font-weight: 700
+      
+    p
+      display: inline-block
+      width: fit-content
+      padding: 10px
+      background: $white_color
+      box-shadow: 0px 5px 25px rgba(253, 235, 0, 0.3)
+      &:first-child
+        padding-bottom: 5px
+        border-radius: 5px 5px 5px 0
+      &:last-child
+        padding-top: 0
+        margin-top: -5px
+        border-radius: 0 0 5px 5px 
+
+  .container
+    position: relative
+
+.skills__title
+  position: relative
+  max-width: 527px  
+
+.skills__subtitle-pattern
+  position: absolute
+  right: 0
+  bottom: 0
+  width: 41px
+  height: 41px
+  background: $accent_color
+  border-radius: 5px
+
+.skills__pattern
+  position: absolute
+  top: -52px
+  right: 20px
+  width: 90px
+  @include md
+    width: 130px
+    top: -40px
+    right: 45px
+  @include lg
+    width: 159px
+    top: 6px
+    right: 38px
+
+  svg
+    width: 100%
+
+.skills__wrap
+  @include sm
+    display: flex
+    justify-content: flex-start
+    align-items: center
+    flex-wrap: wrap
+    margin-right: -30px
+  @include xl
+    margin-right: -45px
+
+.skills__item
+  display: flex
+  justify-content: space-between
+  align-items: center
+  max-width: 375px
+  margin-bottom: 20px
+  &:nth-child(2n+1)
+    .skills__img
+      &::after
+        bottom: -6px
+  &:nth-child(2n)
+    .skills__img
+      &::after
+        top: -6px
+  @include sm
+    width: calc( 100% /2 - 30px )
+    max-width: none
+    margin-right: 30px
+    margin-bottom: 30px
+  @include lg
+    width: calc( 100% /3 - 30px )
+    max-width: 376px
+  @include xl 
+    width: calc( 100% /3 - 45px )
+    margin-right: 45px
+    margin-bottom: 75px     
+
+.skills__img
+  position: relative
+  width: 22%
+  max-width: 104px
+  border-radius: 5px
+  z-index: 2
+  @include xl
+    width: 28%
+  &::after
+    content: ""
+    position: absolute
+    width: 100%
+    height: 100%
+    right: -6px
+    border: 1px solid $black_color
+    border-radius: 5px
+    z-index: -1
+
+  img
+    display: block
+    width: 100%
+
+.skills__text
+  width: 70% 
+  font-size: 16px
+  color:  $black_color
+  @include xl 
+    max-width: 240px
+    width: 64%
+    font-size: 18px
+
+.important
+  padding: 70px 0
+  background: $dark_color
+  @include lg
+    padding: 84px 0
+
+.important__wrap
+  @include sm
+    display: flex
+    justify-content: space-between
+
+.important__title-wrap      
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  margin-bottom: 30px
+  @include sm
+    margin-right: 24px
+    margin-bottom: 0
+  @include md
+    margin-right: 51px
+  @include lg
+    margin-top: -12px
+  
+.important__title
+  width: fit-content
+  font-family: Montserrat
+  font-weight: 900
+  font-size: 36px
+  text-transform: uppercase
+  -webkit-text-stroke: 1px $white_color
+  -webkit-text-fill-color: transparent
+  &:nth-child(2)
+    margin-left: 40px
+    opacity: 0.4
+    @include sm
+      margin-left: 20px
+    @include md
+      margin-left: 40px
+  &:nth-child(3)
+    margin-left: 80px
+    opacity: 0.2  
+    @include sm
+      margin-left: 40px
+    @include md
+      margin-left: 80px
+    @include lg
+      margin-bottom: -20px
+  @include md
+    font-size: 42px
+  @include lg
+    font-size: 55px
+  @include xl 
+    font-size: 60px
+
+.important__desc
+  max-width: 460px
+  @include sm
+    width: 66%
+  @include md
+    max-width: 819px
+  @include lg
+    width: 72%
+  @include xl
+    width: 66%
+
+.important__text
+  font-size: 17px
+  color: $white_color
+  @include lg
+    font-size: 22px
+  @include xl
+    font-size: 25px
+  &:nth-child(2)
+    margin: 20px 0
+    color: $accent_color
+    @include lg
+      margin: 39px 0
+    
+  span
+    font-weight: 700
+
+.location
+  .container
+    position: relative
+
+.location__wrap
+  display: flex
+  justify-content: space-between
+  flex-direction: column-reverse
+  padding: 70px 0 
+  @include sm
+    flex-direction: row
+  @include lg
+    padding: 125px 0 133px
+
+.location__map-wrap 
+  z-index: 1
+  height: 350px
+  @include sm
+    width: 47%
+    height: auto
+  @include lg
+    max-width: 610px
+    width: 50%
+
+.location__map
+  position: relative
+  width: 100%
+  height: 100%
+
+  iframe
+    width: 100%
+    height: 100%
+
+#map
+  height: 100%
+
+.location__map-text
+  position: absolute
+  left: -19px
+  top: -15px
+  padding: 19px 35px 19px 55px
+  z-index: 1
+  transform: scale(0.85) rotate(-5deg)
+  border-radius: 5px
+  background: $accent_color
+  box-shadow: 0px 5px 25px rgba(253, 235, 0, 0.3)
+  font-size: 18px
+  @include lg
+    left: 46px
+    transform: scale(1) rotate(-5deg)
+
+  span
+    font-weight: 700
+
+.location__map-icon
+  position: absolute
+  top: 18px
+  left: 18px
+  width: 17px
+
+  svg
+    width: 100%
+
+.gm-style-mtc > div,
+.gm-style-mtc,
+.gm-svpc,
+.gm-fullscreen-control,
+.gm-style-cc 
+  display: none
+
+.gmnoprint
+  button
+    background: $accent_color!important
+
+.location__content
+  max-width: 460px
+  @include sm
+    width: 47%
+  @include lg
+    max-width: 505px
+    width: 41%
+
+.location__text
+  margin-bottom: 20px
+  font-size: 16px
+  @include lg
+    margin: 10px 0 50px 
+    font-size: 18px
+  @include xl
+    margin: 16px 90px 90px 0
+
+  span
+    font-weight: 700
+
+.location__img-wrap
+  display: flex
+  justify-content: space-between
+  margin-right: -12px
+  margin-bottom: 40px
+  @include sm
+    margin-bottom: 0
+  @include md
+    margin-right: -20px
+
+.location__img    
+  width: calc( 100% / 3 - 15px )
+  margin-right: 15px
+  border-radius: 5px
+  @include md
+    width: calc( 100% / 3 - 20px )
+    margin-right: 20px
+
+  img
+    display: block
+    width: 100%
+    height: auto
+
+.location__footer
+  position: relative
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: space-around
+  height: 65px
+  margin-bottom: 110px
+  background: $dark_color
+  border-radius: 5px
+  overflow: hidden
+  @include md
+    height: 85px
+
+.location__footer-item
+  position: absolute
+  opacity: 0.3
+  transform: rotate(-5deg)
+  font-family: Montserrat
+  font-weight: 900
+  font-size: 25px
+  text-transform: uppercase
+  -webkit-text-fill-color: transparent
+  &:first-child
+    left: 10px
+    top: 3px
+    -webkit-text-stroke: 1px $white_color  
+    @include sm
+      left: 25px
+      top: -10px
+    @include lg
+      top: -20px
+    @include xl
+      top: -30px
+  &:last-child
+    right: -70px
+    bottom: -5px
+    white-space: nowrap
+    -webkit-text-stroke: 1px $accent_color 
+    @include sm
+      right: -30px
+    @include lg
+      bottom: -20px
+    @include xl
+      right: -38px
+      bottom: -27px
+  @include sm
+    font-size: 34px
+  @include md
+    font-size: 45px
+  @include lg
+    font-size: 55px
+  @include xl
+    font-size: 64px
+
+.location__pattern
+  position: absolute
+  width: 159px
+  bottom: -105px
+  right: -60px
+
+  svg
+    width: 100%
+
+
+  
